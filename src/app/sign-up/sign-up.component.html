@@ -1,0 +1,34 @@
+<div class='row'>
+    <div class="col s12 m4 offset-m4">
+        <div class="card hoverable">
+            <div class="card-content center">
+                <span class="card-title">Page d'inscription</span>
+                <p><em>{{message}}</em></p>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="register()">
+                <div>
+                    <label for="email">Email</label>
+                    <!-- <input type="email" id="email" [(ngModel)]="email" name="email" required> -->
+                    <input type="email" id="email" formControlName="email" required placeholder="yourEmail@gmail.com">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <!-- <input type="password" id="password" [(ngModel)]="password"  name="password" required> -->
+                    <input type="password" id="password" formControlName="password" required placeholder="Entrez votre mot de passe">
+                </div>
+                <div>
+                    <label for="password">Confirm Password</label>
+                    <!-- <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword"  name="confirmPassword" required> -->
+                    <input type="password" id="confirmPassword" formControlName="confirmPassword" required placeholder="Confirmez votre mot de passe">
+                </div>
+                <div class="card-action center">
+                    <button type="submit" class="waves-effect waves-light btn">S'inscrire</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <p>sign-up works!</p> -->

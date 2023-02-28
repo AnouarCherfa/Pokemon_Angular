@@ -1,0 +1,20 @@
+<h2 class="center">Ajouter une liste de pokémons</h2>
+<div class='row'>
+    <div class="col s12 m4 offset-m4">
+        <div class="card hoverable">
+            <div class="card-content center">
+                <span class="card-title">Importer la list de pokemons:</span>
+            </div>
+            <form>
+                <div>
+                    <input type="file" name="file" (change)="onFileSelected($event)">
+                </div>
+                <div class="card-action center">
+                    <button (click)="onUpload()">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<h2 class="center">Ajouter un pokémon</h2>
+<app-pokemon-form [pokemon]="pokemon"></app-pokemon-form>
